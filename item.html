@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolso de Valor - Itens</title>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="./item.js"></script>
+</head>
+<body>
+    <h1>Bolso de Valor</h1>
+    <h2 id="nome-categoria"></h2>
+    <a href="./categoria.html" class="btn btn-secondary">Voltar</a>
+    <button class="btn btn-success" onclick="mudarVisualizacaoItem()">Novo</button>
+    <select id="item-mes" onchange="atualizaListagemItens()">
+        <option value="1">Janeiro</option>
+        <option value="2">Fevereiro</option>
+        <option value="3">Março</option>
+        <option value="4">Abril</option>
+        <option value="5">Maio</option>
+        <option value="6">Junho</option>
+        <option value="7">Julho</option>
+        <option value="8">Agosto</option>
+        <option value="9">Setembro</option>
+        <option value="10" selected>Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
+    </select>
+    <div id="div-item-list"></div>
+    <div id="div-item-create" class="d-none">
+        <form>
+            <label>Nome</label>
+            <input id="item-nome" type="text" class="form-control">
+            <label>Descrição</label>
+            <input id="item-desc" type="text" class="form-control">
+            <label>Valor</label>
+            <input id="item-valor" type="text" class="form-control">
+            <button class="btn" onclick="mudarVisualizacaoItem()">Cancelar</button>
+            <button class="btn btn-success" type="submit" onclick="onClickSalvarItem()">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>
